@@ -1,0 +1,11 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+
+chain_id = 1
+eth_rpc_url = 'https://eth-mainnet.alchemyapi.io/v2/VekluxnUmXllQjrqkq_tNLCbMnbUcqaD'
+block_number = 14812830
+etherscan_api_key = 'PHCBEGD9USUQ45PTA4C6NJMTP6A76PU4D1'
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config

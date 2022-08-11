@@ -1,0 +1,132 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "gatekeeper",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "gatekeeper()": "a59c9c27"
+  },
+  "ast": {
+    "absolutePath": "lib/StakingV2/StakingV2/contracts/interfaces/roles/IGatekeeperable.sol",
+    "id": 5120,
+    "exportedSymbols": {
+      "IGatekeeperable": [
+        5119
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:112:32",
+    "nodes": [
+      {
+        "id": 5113,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:32",
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 5119,
+        "nodeType": "ContractDefinition",
+        "src": "57:86:32",
+        "nodes": [
+          {
+            "id": 5118,
+            "nodeType": "FunctionDefinition",
+            "src": "87:54:32",
+            "functionSelector": "a59c9c27",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "gatekeeper",
+            "nameLocation": "96:10:32",
+            "parameters": {
+              "id": 5114,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "106:2:32"
+            },
+            "returnParameters": {
+              "id": 5117,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5116,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5118,
+                  "src": "132:7:32",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5115,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "132:7:32",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "131:9:32"
+            },
+            "scope": 5119,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IGatekeeperable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          5119
+        ],
+        "name": "IGatekeeperable",
+        "nameLocation": "67:15:32",
+        "scope": 5120,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 32
+}

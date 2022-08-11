@@ -1,0 +1,1343 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "allUnclaimedRewards",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "totalRewards",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "vaultsRewards",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "stakingRewards",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_stakeId",
+          "type": "uint256"
+        }
+      ],
+      "name": "calculateStakingRewards",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_user",
+          "type": "address"
+        }
+      ],
+      "name": "calculateVaultRewards",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        }
+      ],
+      "name": "claimAll",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "vault",
+          "type": "address"
+        }
+      ],
+      "name": "perVaultRewardsWeight",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "rate",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "_rate",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_epoch",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address[]",
+          "name": "vaults",
+          "type": "address[]"
+        },
+        {
+          "internalType": "uint256[]",
+          "name": "weights",
+          "type": "uint256[]"
+        }
+      ],
+      "name": "setPerVaultRewardsWeight",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_weightForVaults",
+          "type": "uint256"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_weightForStaking",
+          "type": "uint256"
+        }
+      ],
+      "name": "setRewardsAllocationWeights",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "stakingRewardsWeight",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "vaultsRewardsWeight",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "allUnclaimedRewards(address)": "ba67e644",
+    "calculateStakingRewards(uint256)": "0ee2bb31",
+    "calculateVaultRewards(address)": "cafecbdf",
+    "claimAll(address)": "77329f35",
+    "perVaultRewardsWeight(address)": "4eef7688",
+    "rate()": "2c4e722e",
+    "setPerVaultRewardsWeight(address[],uint256[])": "cea942fb",
+    "setRewardsAllocationWeights(uint256,uint256)": "4d443a23",
+    "stakingRewardsWeight()": "2de3540b",
+    "vaultsRewardsWeight()": "86b3261a"
+  },
+  "ast": {
+    "absolutePath": "lib/StakingV2/StakingV2/contracts/interfaces/IYOPRewards.sol",
+    "id": 5112,
+    "exportedSymbols": {
+      "IYOPRewards": [
+        5088
+      ],
+      "IYOPRewardsV2": [
+        5111
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:2129:31",
+    "nodes": [
+      {
+        "id": 5011,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:31",
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 5088,
+        "nodeType": "ContractDefinition",
+        "src": "57:1854:31",
+        "nodes": [
+          {
+            "id": 5019,
+            "nodeType": "FunctionDefinition",
+            "src": "209:70:31",
+            "documentation": {
+              "id": 5012,
+              "nodeType": "StructuredDocumentation",
+              "src": "83:123:31",
+              "text": "@notice Returns the current emission rate (per epoch) for vault rewards and the current number of epoch (start from 1)."
+            },
+            "functionSelector": "2c4e722e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "rate",
+            "nameLocation": "218:4:31",
+            "parameters": {
+              "id": 5013,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "222:2:31"
+            },
+            "returnParameters": {
+              "id": 5018,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5015,
+                  "mutability": "mutable",
+                  "name": "_rate",
+                  "nameLocation": "256:5:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5019,
+                  "src": "248:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5014,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "248:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5017,
+                  "mutability": "mutable",
+                  "name": "_epoch",
+                  "nameLocation": "271:6:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5019,
+                  "src": "263:14:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5016,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "263:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "247:31:31"
+            },
+            "scope": 5088,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5025,
+            "nodeType": "FunctionDefinition",
+            "src": "362:63:31",
+            "documentation": {
+              "id": 5020,
+              "nodeType": "StructuredDocumentation",
+              "src": "283:76:31",
+              "text": "@notice Returns the current ratio of community emissions for vault users"
+            },
+            "functionSelector": "86b3261a",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "vaultsRewardsWeight",
+            "nameLocation": "371:19:31",
+            "parameters": {
+              "id": 5021,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "390:2:31"
+            },
+            "returnParameters": {
+              "id": 5024,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5023,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5025,
+                  "src": "416:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5022,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "416:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "415:9:31"
+            },
+            "scope": 5088,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5031,
+            "nodeType": "FunctionDefinition",
+            "src": "510:64:31",
+            "documentation": {
+              "id": 5026,
+              "nodeType": "StructuredDocumentation",
+              "src": "429:78:31",
+              "text": "@notice Returns the current ratio of community emissions for staking users"
+            },
+            "functionSelector": "2de3540b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "stakingRewardsWeight",
+            "nameLocation": "519:20:31",
+            "parameters": {
+              "id": 5027,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "539:2:31"
+            },
+            "returnParameters": {
+              "id": 5030,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5029,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5031,
+                  "src": "565:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5028,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "565:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "564:9:31"
+            },
+            "scope": 5088,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5039,
+            "nodeType": "FunctionDefinition",
+            "src": "705:99:31",
+            "documentation": {
+              "id": 5032,
+              "nodeType": "StructuredDocumentation",
+              "src": "578:124:31",
+              "text": "@notice Set the ratios of community emission for vaults and staking respectively. Governance only. Should emit an event."
+            },
+            "functionSelector": "4d443a23",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setRewardsAllocationWeights",
+            "nameLocation": "714:27:31",
+            "parameters": {
+              "id": 5037,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5034,
+                  "mutability": "mutable",
+                  "name": "_weightForVaults",
+                  "nameLocation": "750:16:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5039,
+                  "src": "742:24:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5033,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "742:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5036,
+                  "mutability": "mutable",
+                  "name": "_weightForStaking",
+                  "nameLocation": "776:17:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5039,
+                  "src": "768:25:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5035,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "768:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "741:53:31"
+            },
+            "returnParameters": {
+              "id": 5038,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "803:0:31"
+            },
+            "scope": 5088,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5047,
+            "nodeType": "FunctionDefinition",
+            "src": "848:78:31",
+            "documentation": {
+              "id": 5040,
+              "nodeType": "StructuredDocumentation",
+              "src": "808:37:31",
+              "text": "@notice Get the weight of a Vault"
+            },
+            "functionSelector": "4eef7688",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "perVaultRewardsWeight",
+            "nameLocation": "857:21:31",
+            "parameters": {
+              "id": 5043,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5042,
+                  "mutability": "mutable",
+                  "name": "vault",
+                  "nameLocation": "887:5:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5047,
+                  "src": "879:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5041,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "879:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "878:15:31"
+            },
+            "returnParameters": {
+              "id": 5046,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5045,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5047,
+                  "src": "917:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5044,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "917:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "916:9:31"
+            },
+            "scope": 5088,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5057,
+            "nodeType": "FunctionDefinition",
+            "src": "1009:98:31",
+            "documentation": {
+              "id": 5048,
+              "nodeType": "StructuredDocumentation",
+              "src": "930:76:31",
+              "text": "@notice Set the weights for vaults. Governance only. Should emit events."
+            },
+            "functionSelector": "cea942fb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "setPerVaultRewardsWeight",
+            "nameLocation": "1018:24:31",
+            "parameters": {
+              "id": 5055,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5051,
+                  "mutability": "mutable",
+                  "name": "vaults",
+                  "nameLocation": "1062:6:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5057,
+                  "src": "1043:25:31",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5049,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1043:7:31",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 5050,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1043:9:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5054,
+                  "mutability": "mutable",
+                  "name": "weights",
+                  "nameLocation": "1089:7:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5057,
+                  "src": "1070:26:31",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5052,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1070:7:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 5053,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1070:9:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1042:55:31"
+            },
+            "returnParameters": {
+              "id": 5056,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1106:0:31"
+            },
+            "scope": 5088,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5063,
+            "nodeType": "FunctionDefinition",
+            "src": "1283:55:31",
+            "documentation": {
+              "id": 5058,
+              "nodeType": "StructuredDocumentation",
+              "src": "1111:169:31",
+              "text": "@notice Calculate the rewards for the given user in the given vault. Vaults Only.\n This should be called by every Vault every time a user deposits or withdraws."
+            },
+            "functionSelector": "cafecbdf",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculateVaultRewards",
+            "nameLocation": "1292:21:31",
+            "parameters": {
+              "id": 5061,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5060,
+                  "mutability": "mutable",
+                  "name": "_user",
+                  "nameLocation": "1322:5:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5063,
+                  "src": "1314:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5059,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1314:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1313:15:31"
+            },
+            "returnParameters": {
+              "id": 5062,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1337:0:31"
+            },
+            "scope": 5088,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5069,
+            "nodeType": "FunctionDefinition",
+            "src": "1426:60:31",
+            "documentation": {
+              "id": 5064,
+              "nodeType": "StructuredDocumentation",
+              "src": "1342:81:31",
+              "text": "@notice Calculate the rewards for the given stake id in the staking contract."
+            },
+            "functionSelector": "0ee2bb31",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "calculateStakingRewards",
+            "nameLocation": "1435:23:31",
+            "parameters": {
+              "id": 5067,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5066,
+                  "mutability": "mutable",
+                  "name": "_stakeId",
+                  "nameLocation": "1467:8:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5069,
+                  "src": "1459:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5065,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1459:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1458:18:31"
+            },
+            "returnParameters": {
+              "id": 5068,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1485:0:31"
+            },
+            "scope": 5088,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5075,
+            "nodeType": "FunctionDefinition",
+            "src": "1626:40:31",
+            "documentation": {
+              "id": 5070,
+              "nodeType": "StructuredDocumentation",
+              "src": "1490:133:31",
+              "text": "@notice Allow a user to claim the accrued rewards from both vaults and staking, and transfer the YOP tokens to the given account."
+            },
+            "functionSelector": "77329f35",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimAll",
+            "nameLocation": "1635:8:31",
+            "parameters": {
+              "id": 5073,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5072,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "1652:3:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5075,
+                  "src": "1644:11:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5071,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1644:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1643:13:31"
+            },
+            "returnParameters": {
+              "id": 5074,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1665:0:31"
+            },
+            "scope": 5088,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5087,
+            "nodeType": "FunctionDefinition",
+            "src": "1737:172:31",
+            "documentation": {
+              "id": 5076,
+              "nodeType": "StructuredDocumentation",
+              "src": "1670:64:31",
+              "text": "@notice Calculate the unclaimed rewards for the calling user"
+            },
+            "functionSelector": "ba67e644",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "allUnclaimedRewards",
+            "nameLocation": "1746:19:31",
+            "parameters": {
+              "id": 5079,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5078,
+                  "mutability": "mutable",
+                  "name": "_user",
+                  "nameLocation": "1774:5:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5087,
+                  "src": "1766:13:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5077,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1766:7:31",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1765:15:31"
+            },
+            "returnParameters": {
+              "id": 5086,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5081,
+                  "mutability": "mutable",
+                  "name": "totalRewards",
+                  "nameLocation": "1831:12:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5087,
+                  "src": "1823:20:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5080,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1823:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5083,
+                  "mutability": "mutable",
+                  "name": "vaultsRewards",
+                  "nameLocation": "1859:13:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5087,
+                  "src": "1851:21:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5082,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1851:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5085,
+                  "mutability": "mutable",
+                  "name": "stakingRewards",
+                  "nameLocation": "1888:14:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5087,
+                  "src": "1880:22:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5084,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1880:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1815:93:31"
+            },
+            "scope": 5088,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IYOPRewards",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          5088
+        ],
+        "name": "IYOPRewards",
+        "nameLocation": "67:11:31",
+        "scope": 5112,
+        "usedErrors": []
+      },
+      {
+        "id": 5111,
+        "nodeType": "ContractDefinition",
+        "src": "1913:247:31",
+        "nodes": [
+          {
+            "id": 5099,
+            "nodeType": "FunctionDefinition",
+            "src": "1941:106:31",
+            "functionSelector": "5c9e74d9",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimRewardsForStakes",
+            "nameLocation": "1950:21:31",
+            "parameters": {
+              "id": 5092,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5091,
+                  "mutability": "mutable",
+                  "name": "_stakeIds",
+                  "nameLocation": "1991:9:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5099,
+                  "src": "1972:28:31",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_calldata_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5089,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "1972:7:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 5090,
+                    "nodeType": "ArrayTypeName",
+                    "src": "1972:9:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1971:30:31"
+            },
+            "returnParameters": {
+              "id": 5098,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5094,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5099,
+                  "src": "2020:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5093,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2020:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5097,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5099,
+                  "src": "2029:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5095,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2029:7:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 5096,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2029:9:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2019:27:31"
+            },
+            "scope": 5111,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5110,
+            "nodeType": "FunctionDefinition",
+            "src": "2051:107:31",
+            "functionSelector": "52b741bb",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "claimVaultRewardsForUsers",
+            "nameLocation": "2060:25:31",
+            "parameters": {
+              "id": 5103,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5102,
+                  "mutability": "mutable",
+                  "name": "_users",
+                  "nameLocation": "2105:6:31",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5110,
+                  "src": "2086:25:31",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_calldata_ptr",
+                    "typeString": "address[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5100,
+                      "name": "address",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2086:7:31",
+                      "stateMutability": "nonpayable",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "id": 5101,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2086:9:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                      "typeString": "address[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2085:27:31"
+            },
+            "returnParameters": {
+              "id": 5109,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5105,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5110,
+                  "src": "2131:7:31",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 5104,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2131:7:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5108,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5110,
+                  "src": "2140:16:31",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_uint256_$dyn_memory_ptr",
+                    "typeString": "uint256[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 5106,
+                      "name": "uint256",
+                      "nodeType": "ElementaryTypeName",
+                      "src": "2140:7:31",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "id": 5107,
+                    "nodeType": "ArrayTypeName",
+                    "src": "2140:9:31",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_uint256_$dyn_storage_ptr",
+                      "typeString": "uint256[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2130:27:31"
+            },
+            "scope": 5111,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IYOPRewardsV2",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          5111
+        ],
+        "name": "IYOPRewardsV2",
+        "nameLocation": "1923:13:31",
+        "scope": 5112,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 31
+}

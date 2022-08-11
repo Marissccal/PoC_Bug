@@ -1,0 +1,1269 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "previousAdmin",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "newAdmin",
+          "type": "address"
+        }
+      ],
+      "name": "AdminChanged",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "beacon",
+          "type": "address"
+        }
+      ],
+      "name": "BeaconUpgraded",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_guardian",
+          "type": "address"
+        }
+      ],
+      "name": "GatekeeperUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_pendingGovenance",
+          "type": "address"
+        }
+      ],
+      "name": "GovenanceProposed",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "_govenance",
+          "type": "address"
+        }
+      ],
+      "name": "GovenanceUpdated",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Paused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "address",
+          "name": "account",
+          "type": "address"
+        }
+      ],
+      "name": "Unpaused",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "implementation",
+          "type": "address"
+        }
+      ],
+      "name": "Upgraded",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "acceptGovernance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "gatekeeper",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "governance",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "paused",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pendingGovernance",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_pendingGovernance",
+          "type": "address"
+        }
+      ],
+      "name": "proposeGovernance",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_gatekeeper",
+          "type": "address"
+        }
+      ],
+      "name": "setGatekeeper",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "unpause",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newImplementation",
+          "type": "address"
+        }
+      ],
+      "name": "upgradeTo",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "newImplementation",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "data",
+          "type": "bytes"
+        }
+      ],
+      "name": "upgradeToAndCall",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "acceptGovernance()": "238efcbc",
+    "gatekeeper()": "a59c9c27",
+    "governance()": "5aa6e675",
+    "pause()": "8456cb59",
+    "paused()": "5c975abb",
+    "pendingGovernance()": "f39c38a0",
+    "proposeGovernance(address)": "c373a08e",
+    "setGatekeeper(address)": "fbb97956",
+    "unpause()": "3f4ba83a",
+    "upgradeTo(address)": "3659cfe6",
+    "upgradeToAndCall(address,bytes)": "4f1ef286"
+  },
+  "ast": {
+    "absolutePath": "lib/StakingV2/StakingV2/contracts/security/BasePauseableUpgradeable.sol",
+    "id": 5215,
+    "exportedSymbols": {
+      "AddressUpgradeable": [
+        2611
+      ],
+      "BasePauseableUpgradeable": [
+        5214
+      ],
+      "Context": [
+        3851
+      ],
+      "ContextUpgradeable": [
+        2655
+      ],
+      "ERC1967UpgradeUpgradeable": [
+        397
+      ],
+      "Gatekeeperable": [
+        7428
+      ],
+      "Governable": [
+        7607
+      ],
+      "GovernableInternal": [
+        7579
+      ],
+      "GovernableUpgradeable": [
+        7640
+      ],
+      "IBeaconUpgradeable": [
+        407
+      ],
+      "IGatekeeperable": [
+        5119
+      ],
+      "IGovernable": [
+        7442
+      ],
+      "Initializable": [
+        481
+      ],
+      "PausableUpgradeable": [
+        705
+      ],
+      "StorageSlotUpgradeable": [
+        2715
+      ],
+      "UUPSUpgradeable": [
+        592
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "32:1905:33",
+    "nodes": [
+      {
+        "id": 5121,
+        "nodeType": "PragmaDirective",
+        "src": "32:23:33",
+        "literals": [
+          "solidity",
+          "=",
+          "0.8",
+          ".9"
+        ]
+      },
+      {
+        "id": 5122,
+        "nodeType": "ImportDirective",
+        "src": "56:78:33",
+        "absolutePath": "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/security/PausableUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 5215,
+        "sourceUnit": 706,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 5123,
+        "nodeType": "ImportDirective",
+        "src": "135:77:33",
+        "absolutePath": "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 5215,
+        "sourceUnit": 593,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 5124,
+        "nodeType": "ImportDirective",
+        "src": "213:40:33",
+        "absolutePath": "lib/StakingV2/StakingV2/contracts/vaults/roles/Governable.sol",
+        "file": "../vaults/roles/Governable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 5215,
+        "sourceUnit": 7641,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 5125,
+        "nodeType": "ImportDirective",
+        "src": "254:44:33",
+        "absolutePath": "lib/StakingV2/StakingV2/contracts/vaults/roles/Gatekeeperable.sol",
+        "file": "../vaults/roles/Gatekeeperable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 5215,
+        "sourceUnit": 7429,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 5214,
+        "nodeType": "ContractDefinition",
+        "src": "574:1362:33",
+        "nodes": [
+          {
+            "id": 5138,
+            "nodeType": "FunctionDefinition",
+            "src": "755:16:33",
+            "body": {
+              "id": 5137,
+              "nodeType": "Block",
+              "src": "769:2:33",
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 5135,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "766:2:33"
+            },
+            "returnParameters": {
+              "id": 5136,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "769:0:33"
+            },
+            "scope": 5214,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 5165,
+            "nodeType": "FunctionDefinition",
+            "src": "826:312:33",
+            "body": {
+              "id": 5164,
+              "nodeType": "Block",
+              "src": "935:203:33",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5148,
+                        "name": "_governance",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5140,
+                        "src": "959:11:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 5147,
+                      "name": "__Governable_init",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7629,
+                      "src": "941:17:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 5149,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "941:30:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5150,
+                  "nodeType": "ExpressionStatement",
+                  "src": "941:30:33"
+                },
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5152,
+                        "name": "_gatekeeper",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5142,
+                        "src": "1009:11:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 5151,
+                      "name": "__Gatekeeperable_init_unchained",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7354,
+                      "src": "977:31:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 5153,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "977:44:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5154,
+                  "nodeType": "ExpressionStatement",
+                  "src": "977:44:33"
+                },
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 5155,
+                      "name": "__Pausable_init_unchained",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 636,
+                      "src": "1027:25:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 5156,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1027:27:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5157,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1027:27:33"
+                },
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 5158,
+                      "name": "__UUPSUpgradeable_init",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 502,
+                      "src": "1060:22:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 5159,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1060:24:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5160,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1060:24:33"
+                },
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 5161,
+                      "name": "__BasePauseableUpgradeable_init_unchained",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 5171,
+                      "src": "1090:41:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 5162,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1090:43:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5163,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1090:43:33"
+                }
+              ]
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 5145,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 5144,
+                  "name": "onlyInitializing",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 465,
+                  "src": "918:16:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "918:16:33"
+              }
+            ],
+            "name": "__BasePauseableUpgradeable_init",
+            "nameLocation": "835:31:33",
+            "parameters": {
+              "id": 5143,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5140,
+                  "mutability": "mutable",
+                  "name": "_governance",
+                  "nameLocation": "875:11:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5165,
+                  "src": "867:19:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5139,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "867:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 5142,
+                  "mutability": "mutable",
+                  "name": "_gatekeeper",
+                  "nameLocation": "896:11:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5165,
+                  "src": "888:19:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5141,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "888:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "866:42:33"
+            },
+            "returnParameters": {
+              "id": 5146,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "935:0:33"
+            },
+            "scope": 5214,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 5171,
+            "nodeType": "FunctionDefinition",
+            "src": "1209:81:33",
+            "body": {
+              "id": 5170,
+              "nodeType": "Block",
+              "src": "1288:2:33",
+              "statements": []
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 5168,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 5167,
+                  "name": "onlyInitializing",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 465,
+                  "src": "1271:16:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1271:16:33"
+              }
+            ],
+            "name": "__BasePauseableUpgradeable_init_unchained",
+            "nameLocation": "1218:41:33",
+            "parameters": {
+              "id": 5166,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1259:2:33"
+            },
+            "returnParameters": {
+              "id": 5169,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1288:0:33"
+            },
+            "scope": 5214,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 5182,
+            "nodeType": "FunctionDefinition",
+            "src": "1382:84:33",
+            "body": {
+              "id": 5181,
+              "nodeType": "Block",
+              "src": "1447:19:33",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 5178,
+                      "name": "_pause",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 684,
+                      "src": "1453:6:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 5179,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1453:8:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5180,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1453:8:33"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 5172,
+              "nodeType": "StructuredDocumentation",
+              "src": "1294:85:33",
+              "text": "@notice Pause the contract. Can be called by either the governance or gatekeeper."
+            },
+            "functionSelector": "8456cb59",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "arguments": [
+                  {
+                    "id": 5175,
+                    "name": "governance",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 7453,
+                    "src": "1435:10:33",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  }
+                ],
+                "id": 5176,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 5174,
+                  "name": "onlyGovernanceOrGatekeeper",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7331,
+                  "src": "1408:26:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1408:38:33"
+              }
+            ],
+            "name": "pause",
+            "nameLocation": "1391:5:33",
+            "parameters": {
+              "id": 5173,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1396:2:33"
+            },
+            "returnParameters": {
+              "id": 5177,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1447:0:33"
+            },
+            "scope": 5214,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5191,
+            "nodeType": "FunctionDefinition",
+            "src": "1543:64:33",
+            "body": {
+              "id": 5190,
+              "nodeType": "Block",
+              "src": "1586:21:33",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 5187,
+                      "name": "_unpause",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 700,
+                      "src": "1592:8:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 5188,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1592:10:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5189,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1592:10:33"
+                }
+              ]
+            },
+            "functionSelector": "3f4ba83a",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 5185,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 5184,
+                  "name": "onlyGovernance",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7469,
+                  "src": "1571:14:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1571:14:33"
+              }
+            ],
+            "name": "unpause",
+            "nameLocation": "1552:7:33",
+            "parameters": {
+              "id": 5183,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1559:2:33"
+            },
+            "returnParameters": {
+              "id": 5186,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1586:0:33"
+            },
+            "scope": 5214,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5204,
+            "nodeType": "FunctionDefinition",
+            "src": "1668:109:33",
+            "body": {
+              "id": 5203,
+              "nodeType": "Block",
+              "src": "1736:41:33",
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 5200,
+                        "name": "_gatekeeper",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 5194,
+                        "src": "1760:11:33",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 5199,
+                      "name": "_updateGatekeeper",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 7399,
+                      "src": "1742:17:33",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$returns$__$",
+                        "typeString": "function (address)"
+                      }
+                    },
+                    "id": 5201,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1742:30:33",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 5202,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1742:30:33"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 5192,
+              "nodeType": "StructuredDocumentation",
+              "src": "1611:54:33",
+              "text": "@notice Set the gatekeeper address of the contract"
+            },
+            "functionSelector": "fbb97956",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 5197,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 5196,
+                  "name": "onlyGovernance",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7469,
+                  "src": "1721:14:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1721:14:33"
+              }
+            ],
+            "name": "setGatekeeper",
+            "nameLocation": "1677:13:33",
+            "parameters": {
+              "id": 5195,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5194,
+                  "mutability": "mutable",
+                  "name": "_gatekeeper",
+                  "nameLocation": "1699:11:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5204,
+                  "src": "1691:19:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5193,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1691:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1690:21:33"
+            },
+            "returnParameters": {
+              "id": 5198,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1736:0:33"
+            },
+            "scope": 5214,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 5213,
+            "nodeType": "FunctionDefinition",
+            "src": "1843:91:33",
+            "body": {
+              "id": 5212,
+              "nodeType": "Block",
+              "src": "1932:2:33",
+              "statements": []
+            },
+            "baseFunctions": [
+              587
+            ],
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 5210,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 5209,
+                  "name": "onlyGovernance",
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 7469,
+                  "src": "1917:14:33"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1917:14:33"
+              }
+            ],
+            "name": "_authorizeUpgrade",
+            "nameLocation": "1852:17:33",
+            "overrides": {
+              "id": 5208,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1908:8:33"
+            },
+            "parameters": {
+              "id": 5207,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 5206,
+                  "mutability": "mutable",
+                  "name": "implementation",
+                  "nameLocation": "1878:14:33",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 5213,
+                  "src": "1870:22:33",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 5205,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1870:7:33",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1869:24:33"
+            },
+            "returnParameters": {
+              "id": 5211,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1932:0:33"
+            },
+            "scope": 5214,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "internal"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 5127,
+              "name": "GovernableUpgradeable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 7640,
+              "src": "622:21:33"
+            },
+            "id": 5128,
+            "nodeType": "InheritanceSpecifier",
+            "src": "622:21:33"
+          },
+          {
+            "baseName": {
+              "id": 5129,
+              "name": "Gatekeeperable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 7428,
+              "src": "647:14:33"
+            },
+            "id": 5130,
+            "nodeType": "InheritanceSpecifier",
+            "src": "647:14:33"
+          },
+          {
+            "baseName": {
+              "id": 5131,
+              "name": "PausableUpgradeable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 705,
+              "src": "665:19:33"
+            },
+            "id": 5132,
+            "nodeType": "InheritanceSpecifier",
+            "src": "665:19:33"
+          },
+          {
+            "baseName": {
+              "id": 5133,
+              "name": "UUPSUpgradeable",
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 592,
+              "src": "688:15:33"
+            },
+            "id": 5134,
+            "nodeType": "InheritanceSpecifier",
+            "src": "688:15:33"
+          }
+        ],
+        "canonicalName": "BasePauseableUpgradeable",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 5126,
+          "nodeType": "StructuredDocumentation",
+          "src": "300:274:33",
+          "text": "@dev Use this contract as the base for contracts that are going to be pauseable and upgradeable.\n  It exposes the common functions used by all these contracts (like Pause, Unpause, setGatekeeper etc) and make sure the right permissions are set for all these methods."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          5214,
+          592,
+          397,
+          705,
+          7428,
+          7640,
+          7579,
+          2655,
+          481,
+          5119
+        ],
+        "name": "BasePauseableUpgradeable",
+        "nameLocation": "592:24:33",
+        "scope": 5215,
+        "usedErrors": []
+      }
+    ],
+    "license": "MIT"
+  },
+  "id": 33
+}
