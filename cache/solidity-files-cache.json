@@ -1715,7 +1715,7 @@
       "versionRequirement": ">=0.6.0, <0.9.0",
       "artifacts": {
         "Script": {
-          "0.8.9+commit.e5eed63a.Windows.msvc": "Script.sol\\Script.json"
+          "0.8.13+commit.abaa5c0e.Windows.msvc": "Script.sol\\Script.json"
         }
       }
     },
@@ -1806,7 +1806,7 @@
       "versionRequirement": ">=0.6.0, <0.9.0",
       "artifacts": {
         "Vm": {
-          "0.8.9+commit.e5eed63a.Windows.msvc": "Vm.sol\\Vm.json"
+          "0.8.13+commit.abaa5c0e.Windows.msvc": "Vm.sol\\Vm.json"
         }
       }
     },
@@ -1844,7 +1844,7 @@
       "versionRequirement": ">=0.4.22, <0.9.0",
       "artifacts": {
         "console": {
-          "0.8.9+commit.e5eed63a.Windows.msvc": "console.sol\\console.json"
+          "0.8.13+commit.abaa5c0e.Windows.msvc": "console.sol\\console.json"
         }
       }
     },
@@ -1882,7 +1882,7 @@
       "versionRequirement": ">=0.4.22, <0.9.0",
       "artifacts": {
         "console2": {
-          "0.8.9+commit.e5eed63a.Windows.msvc": "console2.sol\\console2.json"
+          "0.8.13+commit.abaa5c0e.Windows.msvc": "console2.sol\\console2.json"
         }
       }
     },
@@ -1967,10 +1967,10 @@
         }
       }
     },
-    "test/Contract.t.sol": {
-      "lastModificationDate": 1660250900651,
-      "contentHash": "004c1250f213dd051c1ff47ba3f12fea",
-      "sourceName": "test/Contract.t.sol",
+    "test/Exploit.t.sol": {
+      "lastModificationDate": 1660262273852,
+      "contentHash": "26f54ff63e07ac76bf15bbcf4fd8ecc5",
+      "sourceName": "test/Exploit.t.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -2046,7 +2046,90 @@
       "versionRequirement": "^0.8.9",
       "artifacts": {
         "ContractTest": {
-          "0.8.9+commit.e5eed63a.Windows.msvc": "Contract.t.sol\\ContractTest.json"
+          "0.8.9+commit.e5eed63a.Windows.msvc": "Exploit.t.sol\\ContractTest.json"
+        }
+      }
+    },
+    "test/StackingV2.t.sol": {
+      "lastModificationDate": 1660250900651,
+      "contentHash": "004c1250f213dd051c1ff47ba3f12fea",
+      "sourceName": "test/StackingV2.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs"
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts/token/ERC20/ERC20.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts/token/ERC20/IERC20.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts/token/ERC20/extensions/draft-ERC20Permit.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts/token/ERC20/extensions/draft-IERC20Permit.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts/utils/Context.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts/utils/Counters.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts/utils/Strings.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts/utils/cryptography/ECDSA.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts/utils/cryptography/draft-EIP712.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts-upgradeable/security/PausableUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts-upgradeable/token/ERC1155/ERC1155Upgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/token/ERC1155/IERC1155ReceiverUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/token/ERC1155/IERC1155Upgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/token/ERC1155/extensions/IERC1155MetadataURIUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/token/ERC20/IERC20Upgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts-upgradeable/token/ERC20/utils/SafeERC20Upgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/utils/AddressUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/utils/StorageSlotUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin\\contracts-upgradeable/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
+        "lib/StakingV2/StakingV2/@openzeppelin/contracts-upgradeable/utils/introspection/IERC165Upgradeable.sol",
+        "lib/StakingV2/StakingV2/contracts/interfaces/IAccessControlManager.sol",
+        "lib/StakingV2/StakingV2/contracts/interfaces/IStaking.sol",
+        "lib/StakingV2/StakingV2/contracts/interfaces/IVault.sol",
+        "lib/StakingV2/StakingV2/contracts/interfaces/IYOPRewards.sol",
+        "lib/StakingV2/StakingV2/contracts/interfaces/roles/IGatekeeperable.sol",
+        "lib/StakingV2/StakingV2/contracts/security/BasePauseableUpgradeable.sol",
+        "lib/StakingV2/StakingV2/contracts/staking/Staking.sol",
+        "lib/StakingV2\\StakingV2/contracts/staking/StakingV2.sol",
+        "lib/StakingV2/StakingV2/contracts/vaults/roles/Gatekeeperable.sol",
+        "lib/StakingV2/StakingV2/contracts/vaults/roles/Governable.sol",
+        "lib/forge-std/lib/ds-test/src\\test.sol",
+        "lib/forge-std/src\\Script.sol",
+        "lib/forge-std/src\\Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol"
+      ],
+      "versionRequirement": "^0.8.9",
+      "artifacts": {
+        "ContractTest": {
+          "0.8.9+commit.e5eed63a.Windows.msvc": "StackingV2.t.sol\\ContractTest.json"
         }
       }
     }
